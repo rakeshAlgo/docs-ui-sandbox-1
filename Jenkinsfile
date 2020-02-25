@@ -31,7 +31,7 @@ pipeline {
       steps {
         script {
           properties([
-            [$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/couchbase/docs-ui-sandbox'],
+            [$class: 'GithubProjectProperty', projectUrlStr: env.GIT_URL],
             pipelineTriggers([githubPush()]),
           ])
         }
