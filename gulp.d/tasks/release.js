@@ -64,6 +64,7 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
     console.log(e.stacktrace)
     throw e
   }
+  console.log(commit)
   const readmeContent = await fs
     .readFile('README.adoc', 'utf-8')
     .then((contents) => contents.replace(/^(?:\/\/)?(:current-release: ).+$/m, `$1${tagName}`))
