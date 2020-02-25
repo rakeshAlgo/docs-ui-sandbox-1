@@ -57,7 +57,13 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
   const message = `Release ${tagName}`
   const bundleFileBasename = `${bundleName}-bundle.zip`
   const bundleFile = await versionBundle(path.join(dest, bundleFileBasename), tagName)
-  let commit = await octokit.gitdata.getRef({ owner, repo, ref }).then((result) => result.data.object.sha)
+  let commit
+  try {
+    commit = await octokit.gitdata.getRef({ owner, repo, ref }).then((result) => result.data.object.sha)
+  } catch (e) {
+    console.log(e.stacktrace)
+    throw e
+  }
   const readmeContent = await fs
     .readFile('README.adoc', 'utf-8')
     .then((contents) => contents.replace(/^(?:\/\/)?(:current-release: ).+$/m, `$1${tagName}`))
