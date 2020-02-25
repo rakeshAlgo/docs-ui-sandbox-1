@@ -1,5 +1,5 @@
 {
-  "name": "couchbase-docs-ui",
+  "name": "couchbase-docs-ui-sandbox",
   "description": "Produces the UI bundle used by the Couchbase documentation site",
   "homepage": "https://docs.couchbase.com",
   "license": "MPL-2.0",
