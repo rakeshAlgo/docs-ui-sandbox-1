@@ -2,7 +2,7 @@
 
 def githubApiTokenCredentialsId = 'docs-robot-api-key'
 
-def githubApiTokenCredentials = string(credentialsId: githubApiTokenCredentialsId, variable: 'GITHUB_API_TOKEN')
+def githubApiTokenCredentials = string(credentialsId: githubApiTokenCredentialsId, variable: 'GITHUB_TOKEN')
 
 // Jenkins job configuration
 // -------------------------
