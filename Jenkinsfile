@@ -7,11 +7,11 @@ def githubApiTokenCredentials = string(credentialsId: githubApiTokenCredentialsI
 // Jenkins job configuration
 // -------------------------
 // Category: Multibranch Pipeline
-// Pipeline name: release-docs-ui-bundle
+// Pipeline name: release-docs-ui-sandbox-bundle
 // Branch Sources: Single repository & branch
 // Name: master
 // Source Code Management: Git
-// Repository URL: https://github.com/couchbase/docs-ui
+// Repository URL: https://github.com/couchbase/docs-ui-sandbox
 // Credentials: - none -
 // Refspec: +refs/heads/master:refs/remotes/origin/master
 // Branch specifier: refs/heads/master
@@ -31,7 +31,7 @@ pipeline {
       steps {
         script {
           properties([
-            [$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/couchbase/docs-ui'],
+            [$class: 'GithubProjectProperty', projectUrlStr: 'https://github.com/couchbase/docs-ui-sandbox'],
             pipelineTriggers([githubPush()]),
           ])
         }
