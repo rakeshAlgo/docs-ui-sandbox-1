@@ -58,7 +58,7 @@ module.exports = (dest, bundleName, owner, repo, token, updateBranch) => async (
   const bundleFileBasename = `${bundleName}-bundle.zip`
   const bundleFile = await versionBundle(path.join(dest, bundleFileBasename), tagName)
   let commit
-  console.log([ref, tagName])
+  console.log([process.env.GIT_BRANCH, ref, tagName])
   try {
     commit = await octokit.gitdata.getRef({ owner, repo, ref }).then((result) => result.data.object.sha)
   } catch (e) {
