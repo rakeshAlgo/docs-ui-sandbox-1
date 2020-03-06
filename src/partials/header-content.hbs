@@ -11,7 +11,10 @@
       </div>
       <div id="topbar-menu" class="navbar-menu">
         <div class="navbar-start">
-          <div class="navbar-item has-dropdown">
+          <div class="navbar-item">
+            <a class="navbar-link component" href="/cloud/BETA/index.html"><span class="title">Couchbase Cloud Beta</span></a>
+          </div>
+          {{!-- <div class="navbar-item has-dropdown">
             <a class="navbar-link" href="{{or site.url (or siteRootUrl siteRootPath)}}">Docs</a>
             <div class="navbar-dropdown explore">
               <div class="title">Couchbase Documentation Overview</div>
@@ -55,7 +58,7 @@
           {{#if (and page.component (ne page.component.name 'tutorials'))}}
           {{#if (and page.component (ne page.component.name 'userprofile-couchbase-mobile'))}}
           {{#if (or page.versions (ends-with page.component.name '-sdk'))}}
-          <div class="navbar-item has-dropdown">
+          <div class="navbar-item has-dropdown"> 
             <a class="navbar-link component" href="{{relativize page.componentVersion.url}}"><span class="title">{{{page.component.title}}}</span> <span class="version">{{page.componentVersion.displayVersion}}</span></a>
             <div class="navbar-dropdown versions">
               <div class="cols">
@@ -79,23 +82,23 @@
           {{/if}}
           {{/if}}
           {{/if}}
-          {{/if}}
-          {{#if (and page.component (or (eq page.component.name 'tutorials') (eq page.component.name 'userprofile-couchbase-mobile')))}}
+          {{/if}}--}}
+          {{!-- {{#if (and page.component (or (eq page.component.name 'tutorials') (eq page.component.name 'userprofile-couchbase-mobile')))}}
           <div class="navbar-item">
             <a class="navbar-link component" href="/tutorials/index.html"><span class="title">Tutorials</span></a>
           </div>
-          {{/if}}
-          {{#if env.ALGOLIA_API_KEY}}
+          {{/if}} --}}
+          {{!-- {{#if env.ALGOLIA_API_KEY}}
             <form class="navbar-item search">
               <input type="text" placeholder="Search Couchbase Docs" class="query" id="search-query">
               <button type="button" class="search"><span>Search</span></button>
             </form>
-          {{/if}}
+          {{/if}} --}}
         </div>
-        <div class="navbar-end">
+        {{!-- <div class="navbar-end">
           <div class="navbar-item">
             <a class="btn red-btn" href="https://www.couchbase.com/downloads">Downloads</a>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
