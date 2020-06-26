@@ -88,7 +88,7 @@
   font-size: 30px;
 }
 
-.doc h1 a.anchor::before,
+/* .doc h1 a.anchor::before,
 .doc h2 a.anchor::before,
 .doc h3 a.anchor::before,
 .doc h4 a.anchor::before,
@@ -97,7 +97,7 @@
   content: "\f0c1";
   font-family: "Font Awesome 5 Free", sans-serif;
   font-weight: 900;
-}
+} */
 
 .doc h1:hover a.anchor,
 .doc h2:hover a.anchor,

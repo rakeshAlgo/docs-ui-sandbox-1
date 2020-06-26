@@ -3,7 +3,7 @@
   ;[].slice.call(document.querySelectorAll('td.icon>i.fa')).forEach(function (el) {
     el.classList.remove('fa')
   })
-
+  // require('@fortawesome/fontawesome-free/js/all.min')
   require('@fortawesome/fontawesome-free/js/v4-shims')
   var fa = require('@fortawesome/fontawesome-svg-core')
 

@@ -7,6 +7,10 @@
   transition: height 0.5s ease;
 }
 
+.header svg.svg-inline--fa.fa-link.fa-w-16.d-none {
+  display: none;
+}
+
 .navbar {
   position: relative;
   display: flex;

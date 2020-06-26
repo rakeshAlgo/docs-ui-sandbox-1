@@ -1,6 +1,7 @@
 ;(function ($) {
   'use strict'
   var tableBlock = document.querySelectorAll('table.tableblock')
+  var headingIcon = document.querySelectorAll('.doc h2 > a.anchor')
   // for label edition/statuses
   var $labels = $('.edition').find('a')
   for (var i = 0; i < $labels.length; i++) {
@@ -14,5 +15,16 @@
       elem.classList.add('caption-table')
     }
   })
+
+  // append fontawesome icon on heading
+    headingIcon.forEach (function (item, index) {
+      item
+      .insertAdjacentHTML(
+        'beforeend',
+        /*eslint max-len: ["error", { "code": 180 }]*/
+        '<i class="fas fa-link"></i> '
+          )
+
+        })
   /*eslint-env jquery*/
 })(jQuery)
